@@ -1,0 +1,8 @@
+Django==1.5.1
+Markdown==2.2.1
+PIL==1.1.7
+South==0.7.6
+Unipath==0.2.1
+django-tinymce==1.5.1
+psycopg2==2.4.6
+wsgiref==0.1.2

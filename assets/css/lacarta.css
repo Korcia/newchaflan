@@ -1,0 +1,46 @@
+/* ------ mobilyblocks
+-----------------------------------------------*/
+
+
+.socials {
+display:block;
+width:32px;
+height:32px;
+background:url(/static/images/lacarta/share.png) no-repeat;
+cursor:pointer;
+position:relative;
+}
+
+.nature {
+display:block;
+width:150px;
+height:150px;
+background:url(/static/images/lacarta/img1.png) no-repeat;
+cursor:pointer;
+position:relative;
+}
+
+.socials, .nature {
+margin:0 auto;
+}
+
+.socials {
+margin-bottom:50px;
+}
+
+ul.reset,
+ul.reset li {
+display:block;
+list-style:none;
+padding:0;
+margin:0;
+}
+
+ul.reset li {
+position:absolute;
+}
+
+ul.reset li a {
+outline:none;
+}
+

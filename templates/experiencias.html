@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block head_title %}Experi-momentos{% endblock %}
+
+{% block slideshow %}
+<div class="slideshow">
+    <img class="slides" src="/static/images/slides/experiencias/slide1.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide2.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide3.png" style="width:950; height:671;" />
+    <!--<img class="slides" src="/static/images/slides/experiencias/slide4.png" style="width:950; height:671;" />-->
+    <img class="slides" src="/static/images/slides/experiencias/slide5.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide6.png" style="width:950; height:671;" />
+</div><!-- .slideshow -->
+{% endblock %}
+
+{% block inpop %}
+<div class="inpop" id="cierre1">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN PASIÓN</h3>
+    <p>Ideado para momentos en pareja. Una habitación Magnun ambientada para dos. Aromas, pétalos, frutas,
+    Champagne, música y velas. Cena en "El Chaflán", propuesta por Juan Pablo Felipe y después una copa en
+    nuestro Lounge. Disfruten de la noche y por la mañana le servimos el desayuno en la habitación.
+    P.V.P. (IVA incluido) 250 euros la pareja.</p>
+</div>
+{% endblock %}
+{% block inpop2 %}
+<div class="inpop inpop3" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN EXPRESS</h3>
+    <p>Pensado para los viajeros que disponen de un momento para dejar las tensiones fuera de nuestro espacio.</p>
+    <p>Aperitivo en el Bar Cocktail, almuerzo urbano en "El Chaflán" y descanso en habitación individual o doble, hasta las 20 horas.</p>
+    <p>PVP (IVA incluido) 50 euros una persona en individual 90 euros dos personas en doble</p>
+</div>
+{% endblock %}
+{% block inpop3 %}
+<div class="inpop inpop2" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN VIAJERO</h3>
+    <p>Diseñado para grupos de amigos y parejas que quieren compartir un fin  de semana en un Madrid muy "Chic".</p>
+    <p>2 noches de alojamiento (viernes y sábado con salida el domingo), en habitación doble Superior.
+1ª noche cena en "El Chaflán" a base de tapas creativas de la mano de Juan Pablo Felipe, incluyendo las bebidas. Después nos vamos al Glass Bar del Hotel Urban, donde disfrutaremos de 2 copas en uno de los Cocktail Bar más ambientados de Madrid.
+Toca descanso y desayuno en nuestro buffet.</p>
+    <p>2ª noche, Juan Pablo Felipe, preparará un menú degustación de los platos más representativos de su colección. Terminamos la noche con 2 copas en nuestro Lounge.</p>
+    <p>Toca descanso y desayuno en nuestro buffet.
+La propuesta viajera durante el día es:
+Sábado&amp;Segovia. Visita a la ciudad y el Alcázar. Almuerzo degustación en el Restaurante Maracaibo, de la mano de Oscar
+Domingo&amp;Toledo. Visita a la ciudad y al museo de "El Greco"”. Almuerzo degustación en el Restaurante Adolfo, con visita a su bodega.</p>
+    <p>PVP por pareja (IVA incluido) 685€ En individual 420€</p>
+    <p>Incluye entrada al Alcázar de Segovia y el Museo de "El Greco"”. Los traslados no están incluidos.</p>
+</div>
+{% endblock %}
+{% block inpop4 %}
+<div class="inpop inpop4" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN ÁTICO</h3>
+    <p>Ideado para pequeños grupos de hasta 50 personas, que buscan un espacio íntimo donde disfrutar de cumpleaños, cocktails de empresas, bodas y reuniones de amigos. Incluyen una habitación Magnum de cortesía.</p>
+    <p>Celebraciones en un espacio reservado con vistas únicas, las 4 Torres coronando Madrid, es posible en "LA POSADA DE EL CHAFLÁN". Vívelo con nosotros.</p>
+    <p>Consultar precios.</p>
+</div>
+{% endblock %}
+{% block inpop5 %}
+<div class="inpop inpop5" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN MADRID</h3>
+    <p>descubre el Madrid más alternativo en 2 días únicos. Ideado para parejas o grupos de amigos deseosos de descubrir los secretos mejor guardados de Madrid.</p>
+    <p>2 noches de alojamiento (viernes y sábado con salida el domingo), en habitación doble superior.
+<strong>1ª noche</strong> (viernes), aperitivo en nuestro Bar Cocktail y cena degustación en "El Chaflán" de la mano de Juan Pablo Felipe. Nos vamos de copas por el Madrid alternativo. 2 Pubs con música en vivo de nuevos talentos. Una copa en cada uno.
+<strong>2º día</strong> (sábado), nos vamos las exposiciones más interesantes del momento.
+Almuerzo en el Gastro Bar "Estado Puro"” Cena en "El Corral de la Moreria" y después tomaremos 2 copas en el Madrid más canalla.
+Toca descanso y por la mañana desayuno en nuestro buffet.</p>
+    <p>El domingo por la mañana realizaremos una visita por el Madrid antiguo en los Buses turísticos.
+No incluye guía (consultar precios)
+Incluye entrada exposiciones
+Incluye Bus turístico</p>
+    <p>PVP por pareja (IVA incluido) 620€ En individual 385€</p>
+</div>
+{% endblock %}
+
+{% block js %}
+<!--
+<script type="text/javascript">
+$("#cerrar").click(function(){
+    if($('#cierre2').height() > 100){
+        $('#cierre2').hide(500, function() {  // esconde div
+            $(this).css('height','50px');})}
+    else { $('#cierre2').show(500, function() {
+        $(this).css('height', '150px');})};
+     });
+</script>-->
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<form name="formulario_buscador" method="post" action="http://laposadadeelchaflan.booking-channel.com/es/disponibilidad.html" >
+	<input type="hidden" name="modulo[buscador_V3][action]" value="buscar_disponibilidad"/>
+        <input type="hidden" name="modulo[buscador_V3][tipo_busqueda]" value="X_HOTEL"/>
+	<input type="hidden" name="modulo[buscador_V3][id_hotel]" value="HPCHAFLAN"/>
+
+	<!-- formato fecha dd/mm/YYY //-->
+	<input name="modulo[buscador_V3][fecha_entrada]" value="" type="text" size="10">
+	<input name="modulo[buscador_V3][fecha_salida]" value="" type="text" size="10">
+          
+	<!-- Numero de habitaciones a solicitar //-->
+	<input name="modulo[buscador_V3][num_habitaciones]" value="1" type="hidden">
+
+	<!-- datos de la habitación solicitada //-->
+	<input name="modulo[buscador_V3][1][adultos]" type="hidden">
+	<input name="modulo[buscador_V3][1][ninos]" type="hidden">
+
+	<!-- para cada habitaicón a solicitar se enviará un bloque //-->
+	<!--
+		//Habitación 2
+		<input name="modulo[buscador_V3][2][adultos]" type="hidden">
+		<input name="modulo[buscador_V3][2][ninos]" type="hidden">
+
+		//Habitación 3
+		<input name="modulo[buscador_V3][3][adultos]" type="hidden">
+		<input name="modulo[buscador_V3][3][ninos]" type="hidden">
+
+			......
+	//-->
+
+	<!-- Código promocional (opcional) //-->
+	<input type="text" name="modulo[buscador_V3][codigo_promocion]" value=""/>
+	<input type="submit">
+</form>

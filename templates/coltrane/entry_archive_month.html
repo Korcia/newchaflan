@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Archivo mensual de noticias de música clásica y conciertos.">
+{% endblock %}
+
+{% load sidebar_tags %}
+
+{% block head_title %}Noticias publicadas en {{ month|date:"F Y" }}{% endblock %}
+{% block content %}
+    <div id="content">
+ 
+    <h2>Noticias publicadas en {{ month|date:"F Y" }}</h2>
+    {% for entry in object_list %}
+      <div class="post">
+      <h1 class="title">{{ entry.title }}</h1>
+      <p class="byline"><small>Publicado el {{ entry.pub_date|date:"j \de F, Y" }}</small></p>
+      {% if entry.excerpt_html %}
+          <div class="entry">
+          {{ entry.excerpt_html|safe }}
+      {% else %}
+        {{ entry.body_html|truncatewords_html:"50"|safe }}
+      {% endif %}
+      <p class="more"><a href="{{ entry.get_absolute_url }}">&laquo;&laquo;&nbsp;&nbsp;Leer Noticia&nbsp;&nbsp;&raquo;&raquo;</a></p>
+      </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block sidebar %}
+    <div id="sidebar2" class="sidebar">
+    {% get_archivos %}
+    {% if year_range %}
+    <h3>Archivos</h3>
+    {% for year in year_range %}
+        <h4>{{ year.year }}</h4>
+        <ul>
+        {% for month in month_range %}
+            {% ifequal year.year month.year %}
+                <li><a href="{{ ROOT_URL }}/noticias/{{ year.year }}/{{ month|date:"b" }}/">{{ month|date:"F" }}</a></li>
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    {% endif %}
+    </div>
+{% endblock %}

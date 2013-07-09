@@ -1,0 +1,29 @@
+{% extends "base-noticias.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Noticias de la posada de el chaflán chaflan.">
+{% endblock %}
+
+{% block head_title %}Noticias{% endblock %}
+{% block noticias %}
+    <div id="noticias">
+    {% for entry in latest %}
+      <div class="post">
+      <div class="cabecera">
+        <div class="logito"><img src="/static/images/logito2.png" /></div>
+        <div class="titulito"><h2 class="title">{{ entry.titulo }}</h2></div>
+      </div> <!--fin cabecera-->
+      <p class="byline">Publicado el {{ entry.fecha_publicacion|date:"j \d\e F, Y" }}</p>
+      {% if entry.extracto %}
+          <div class="entry">  
+          {{ entry.extracto|safe }}          
+      {% else %}
+          <div id="entry">
+          {{ entry.contenido|truncatewords_html:"50"|safe }}
+          </div>
+      {% endif %}
+      <p class="more"><a href="{{ entry.get_absolute_url }}">&laquo;&laquo;&nbsp;&nbsp;Leer noticia&nbsp;&nbsp;&raquo;&raquo;</a></p>
+      </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "base-reservas.html" %}
+
+{% block head_title %}Reservas{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/jquery-ui-1.8.2.css" type="text/css" media="screen">
+{% endblock %}
+{% block js_reservas %}
+{% endblock %}
+{% block reservas %}
+<div id="buscador">
+    <div id="buscador_content">
+    <form id="formulario_buscador" name="formulario_buscador" method="post" action="http://laposadadeelchaflan.booking-channel.com/es/disponibilidad.html" >
+        <input type="hidden" name="modulo[buscador_V3][action]" value="buscar_disponibilidad"/>
+        <input type="hidden" name="modulo[buscador_V3][tipo_busqueda]" id="tipo_busqueda" value="X_HOTEL"/>
+        <input type="hidden" name="modulo[buscador_V3][id_hotel]" id="id_hotel" value="HPCHAFLAN"/>
+        <input type="hidden" value="31" id="maximo_noches">
+        <input type="hidden" value="Ha especificado más noches de las permitidas por el Hotel. Seleccione un numero menor de noches en el formulario de búsqueda." id="error_maximo_noches">
+        <input type="hidden" name="modulo[buscador_V3][descripcion_provincia]" id="descripcion_provincia" value="">
+        <p>¡Haz tu reserva!
+        <br />
+        <span>¡¡Precio mínimo garantizado!!</span>
+        </p>
+
+        <!-- formato fecha dd/mm/YYY //-->
+        <div id="buscador_fechas">
+            <div id="dosinputs">
+                <div id="dosinputsleft">
+                    Fecha Entrada
+                    <br />
+                    <input id="fecha_entrada" name="modulo[buscador_V3][fecha_entrada]" value="" type="text" size="10" readonly />
+                    <img class="ui-datepicker-trigger" id="calendario_entrada" src="/static/images/calendar.jpg" alt="calendario" title="..." />
+                </div>
+                <div id="dosinputsright">
+                    Fecha Salida
+                    <br />
+                    <input id="fecha_salida" name="modulo[buscador_V3][fecha_salida]" value="" type="text" size="10" readonly />
+                    <img class="ui-datepicker-trigger" id="calendario_salida" src="/static/images/calendar.jpg" alt="calendario" title="..." />
+                </div>
+            </div>
+        <div id="noches">noches: <span id="total_noches"></span></div>
+        <div class="habit_titles">
+            <div class="habit_titles_hab">Habitaciones</div>
+            <div class="habit_titles_adu">Adultos</div>
+            <div class="habit_titles_nin">Niños</div>
+        </div>
+        <div class="habit_content">
+            <div class="habit_content_hab"> 
+                <select id="num_habitaciones" name="modulo[buscador_V3][num_habitaciones]" onchange="refresca_num_hab();">
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                </select>              
+            </div>
+            <div class="habit_content_adu_nin">
+                <div id="fila_hab_1" class="filas_habitaciones">
+                    <div class="div_select_adu">
+                        <select class="select_petit" name="modulo[buscador_V3][1][adultos]">
+                            <option  >1</option>
+                            <option selected='selected' >2</option>
+                            <option  >3</option>
+                            <option  >4</option>
+                        </select>
+                    </div>
+                    <div class="div_select_nin">
+                        <select class="select_petit" name="modulo[buscador_V3][1][ninos]">
+                            <option selected='selected' >0</option>
+                            <option  >1</option>
+                            <option  >2</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="fila_hab_2" class="filas_habitaciones">
+                    <div class="div_select_adu">
+                        <select class="select_petit" name="modulo[buscador_V3][2][adultos]">
+                            <option  >1</option>
+                            <option selected='selected' >2</option>
+                            <option  >3</option>
+                            <option  >4</option>
+                        </select>
+                    </div>
+                    <div class="div_select_nin">
+                        <select class="select_petit" name="modulo[buscador_V3][2][ninos]">
+                            <option selected='selected' >0</option>
+                            <option  >1</option>
+                            <option  >2</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="fila_hab_3" class="filas_habitaciones">
+                    <div class="div_select_adu">
+                        <select class="select_petit" name="modulo[buscador_V3][3][adultos]">
+                            <option  >1</option>
+                            <option selected='selected' >2</option>
+                            <option  >3</option>
+                            <option  >4</option>
+                        </select>
+                    </div>
+                    <div class="div_select_nin">
+                        <select class="select_petit" name="modulo[buscador_V3][3][ninos]">
+                            <option selected='selected' >0</option>
+                            <option  >1</option>
+                            <option  >2</option>
+                        </select>
+                    </div>
+                </div>
+            </div> <!-- fin habit_content_adu_nin -->
+        </div> <!-- fin habit_content -->
+        <br clear="all">
+    </div> <!-- fin buscador_fechas -->
+    <br clear="all">
+    <div id="buscador_datos">
+        <button type="button" onclick="ejecuta_buscar();">Consultar disponibilidad</button>
+    </div>
+
+    <div>
+        <input id="input_codigo" type="text" name="modulo[buscador_V3][codigo_promocion]" style="display: none;" value=""/>
+    </div>
+    </form>
+    </div>
+
+</div>
+    <div id="nube"></div>
+
+{% endblock %}
+

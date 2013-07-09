@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es"><!--<![endif]--><head>
+        <title>La Posada de El Chaflán | {% block head_title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="La Posada de el Chaflán, hotel, restaurante">
+        <meta name="keywords" content="hotel, restaurante, posada, juan pablo felipe">
+        <meta name="viewport" content="width=1024">
+        <link rel="apple-touch-icon" href="/static/images/favicon.png"/>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <link href='/static/css/lhandw.ttf' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/css/noticias.css" type="text/css" media="screen">
+        {% block head %}{% endblock %}
+        <!--<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>-->
+        <script type="text/javascript" src="/static/js/uwt7pnc.js"></script>
+        <script type="text/javascript" src="/static/js/modernizr.js"></script>
+        <!--<script type="text/javascript" src="/static/js/jquery.tools.min.js"></script>-->
+
+
+
+    </head>
+
+    <body>
+        <div class="wrapper">    
+        <div id="graffiti"></div>
+        {% block noticias %} {% endblock %}
+        <div class="push"></div>
+        </div>
+        <div style="clear: both;"></div>
+
+        <div class="footer">
+        <div id="footer_button">
+            Volver...
+        </div>
+
+        <div id="sub-menu-bg"></div>
+        <header role="banner" id="top-container-element">
+
+            <div id="logo-wrap" class="clearfix">
+                <a id="logo" href="/" rel="nofollow">
+                    <img src="/static/images/noticias/logo-retina2.png" alt="">
+                    <h1>La Posada de El Chaflán</h1>
+                </a>
+            </div>
+
+            <div id="bottom-banner-right-col">
+                <div id="nav-wrap">
+                    <nav role="navigation">
+                        <div class="menu"><ul id="menu-navigationsmeny" class="menu"><li><a href="/">Inicio</a></li>
+<li><a href="/noticias/">Noticias</a></li>
+
+<li><a href="#">La Posada</a>
+<ul class="sub-menu">
+    <li><a href="/reservas/">Reservas</a></li>
+    <li><a href="/alojamiento/">Alojamiento</a></li>
+    <li><a href="/experiencias/">Experimomentos</a></li>
+    <li><a href="/servicios/">Servicios</a></li>
+    <li><a href="/atico/">Ático</a></li>
+</ul>
+</li>
+
+<li><a href="#">Juan Pablo Felipe</a>
+<ul class="sub-menu">
+    <li><a href="/biografia/">Biografía</a></li>
+    <li><a href="/consultoria/">Consultoría</a></li>
+    <li><a href="/formacion/">Formación</a></li>
+    <li><a href="/catering/">Cátering</a></li>
+</ul>
+</li>
+
+<li><a href="#">El Chaflán</a>
+<ul class="sub-menu">
+    <li><a href="/restaurante/">Restaurante</a></li>
+    <li><a href="/cocktail/">Cocktail</a></li>
+    <li><a href="/lounge/">Lounge</a></li>
+    <li><a href="/lacarta/">La Carta</a></li>
+</ul>
+</li>
+
+<li><a href="#">Contacto</a>
+<ul class="sub-menu">
+    <li><a href="/contacto/">Contacto</a></li>
+    <li><a href="/bolsa/">Bolsa de Trabajo</a></li>
+</ul>
+</li>
+
+</ul></div>                 </nav>
+
+                </div><!--//nav-wrap-->
+
+            </div><!--//bottom-banner-right-col-->
+                        
+        </header> <!-- end header -->       
+
+            
+        </div>
+        
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="/static/js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/plugins-ck.js"></script>
+        <script type="text/javascript" src="/static/js/scripts-ck.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        var slide = false;
+        var height = $('#top-container-element').height();
+        $('#footer_button').click(function() {
+            var docHeight = $(document).height();
+            var windowHeight = $(window).height();
+            var scrollPos = docHeight - windowHeight + height;
+            $('#top-container-element').animate({ height: "toggle"}, 1000);
+            if(slide == false) {
+                if($.browser.opera) {
+                    $('html').animate({scrollTop: scrollPos+'px'}, 1000);
+                } else {
+                    $('html, body').animate({scrollTop: scrollPos+'px'}, 1000);
+                }
+                slide = true;
+            } else {
+                slide = false;
+            }
+        });
+    });
+</script>
+        {% block js %}{% endblock %}
+</body>
+</html>

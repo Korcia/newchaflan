@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block head_title %}La Carta{% endblock %}
+{% block head %}
+<link href="/static/css/colorbox.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block js_lacarta %}
+<script src="/static/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="/static/js/jquery.colorbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var newImageZIndex = 1;         // To make sure newly-loaded images land on top of images on the table
+var loaded = false;             // Used to prevent initPhotos() running twice
+
+// When the document is ready, fire up the table!
+$( init );
+
+// When the wooden table image has loaded, start bringing in the photos
+function init() {
+  var woodenTable = $('#wooden-table img');
+  woodenTable.load( initPhotos );
+
+  // Hack for browsers that don't fire load events for cached images
+  if ( woodenTable.get(0).complete ) $(woodenTable).trigger("load");
+}
+
+// Set up each of the photos on the table
+
+function initPhotos() {
+
+  // (Ensure this function doesn't run twice)
+  if ( loaded ) return;
+  loaded = true;
+
+  // The table image has loaded, so bring in the table
+  $('#lighttable').fadeIn('fast');
+
+  // Process each photo in turn...
+  $('#lighttable img').each( function(index) {
+
+    // Set a random position and angle for this photo
+    var left = Math.floor( Math.random() * 600 - 100 );
+    var top = Math.floor( Math.random() * 400 + 100 );
+    var angle = Math.floor( Math.random() * 60 - 30 );
+    $(this).css( 'left', left+'px' );
+    $(this).css( 'top', top+'px' );
+    $(this).css( 'transform', 'rotate(' + angle + 'deg)' );   
+    $(this).css( '-moz-transform', 'rotate(' + angle + 'deg)' );   
+    $(this).css( '-webkit-transform', 'rotate(' + angle + 'deg)' );
+    $(this).css( '-o-transform', 'rotate(' + angle + 'deg)' );
+
+    // Make the photo draggable
+    $(this).draggable( { containment: 'parent', stack: '#lighttable img', cursor: 'pointer' } );
+
+    // Make the lightbox pop up when the photo is clicked
+    addLightbox(this);
+
+    // Hide the photo for now, in case it hasn't finished loading
+    $(this).hide();
+
+    // When the photo image has loaded...
+    $(this).load( function() {
+
+      // (Ensure this function doesn't run twice)
+      if ( $(this).data('loaded') ) return;
+      $(this).data('loaded', true);
+
+      // Record the photo's true dimensions
+      var imgWidth = $(this).width();
+      var imgHeight = $(this).height();
+
+      // Make the photo bigger, so it looks like it's high above the table
+      $(this).css( 'width', imgWidth * 1.5 );
+      $(this).css( 'height', imgHeight * 1.5 );
+
+      // Make it completely transparent, ready for fading in
+      $(this).css( 'opacity', 0 );
+
+      // Make sure its z-index is higher than the photos already on the table
+      $(this).css( 'z-index', newImageZIndex++ );
+      $(this).css( 'display', 'block');
+
+      // Gradually reduce the photo's dimensions to normal, fading it in as we go
+      $(this).animate( { width: imgWidth, height: imgHeight, opacity: .95 }, 1200 );
+    } );
+
+    // Hack for browsers that don't fire load events for cached images
+    if ( this.complete ) $(this).trigger("load");
+
+  });
+
+}
+
+function addLightbox( image ) {
+  var imageFile = $(image).attr('src');
+  imageFile = imageFile.replace ( /lacarta\//, "lacarta/slides-big/" )
+  var imageCaption = $(image).attr('alt');
+  $(image).colorbox( { href: imageFile, maxWidth: "900px", maxHeight: "600px", title: imageCaption } );
+}
+
+</script>
+
+{% endblock %}
+{% block lacarta %}
+<!--<div style="clear:both;"></div>-->
+<div id="wooden-table"><img src="/static/images/nube.png" alt="Wooden table image" /></div>
+<!--<div style="clear:both;"></div>-->
+<div id="lighttable">
+    <img src="/static/images/lacarta/quesos-en-formas-con-dulcesx150.jpg" alt="Quesos en Formas con Dulces" />
+    <img src="/static/images/lacarta/hamburguesa-de-torox150.jpg" alt="Hamburguesa de Toro" />
+    <img src="/static/images/lacarta/secreto-ibericox150.jpg" alt="Secreto Ibérico" />
+    <img src="/static/images/lacarta/alcachofas-al-olorosox150.jpg" alt="Alcachofas al Oloroso" />
+    <img src="/static/images/lacarta/tartar-de-atunx150.jpg" alt="Tartar de Atún" />
+</div>
+{% endblock %}
+

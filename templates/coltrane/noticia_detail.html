@@ -1,0 +1,17 @@
+{% extends "base-noticias.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Noticias de la posada de el chaflán chaflan.">
+{% endblock %}
+
+{% block head_title %}Noticias: {{ object.titulo }}{% endblock %}
+{% block noticias %}
+    <div id="noticia-detalle">
+        <div class="post-detalle">
+        <h1 class="title-detalle">{{ object.titulo }}</h1>
+        <p class="byline-detalle"><small>Publicado el {{ object.fecha_publicacion|date:"j \d\e F, Y" }}</small></p>
+        <div class="entry-detalle">
+        {{ object.contenido|safe }}
+        </div>
+        </div>
+    </div>
+{% endblock %}

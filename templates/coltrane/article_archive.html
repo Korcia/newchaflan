@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Artículos de de música clásica.">
+{% endblock %}
+
+{% load sidebar_articles %}
+
+{% block head_title %}Artículos{% endblock %}
+{% block content %}
+    <div id="content">
+    {% for article in latest %}
+      <div class="post">
+      <h1 class="title">{{ article.title }}</h1>
+      <p class="byline">Publicado el {{ article.pub_date|date:"j \de F, Y" }}</p>
+      {% if article.excerpt_html %}
+          <div class="entry">  
+          {{ article.excerpt_html|safe }}
+          
+      {% else %}
+          <div id="content">
+          {{ article.body_html|truncatewords_html:"50"|safe }}
+          </div>
+      {% endif %}
+      <p class="more"><a href="{{ article.get_absolute_url }}">&laquo;&laquo;&nbsp;&nbsp;Leer artículo&nbsp;&nbsp;&raquo;&raquo;</a></p>
+      </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    <div id="sidebar2" class="sidebar">
+    {% get_articles %}
+    {% if year_range %}
+    <h3>Archivos</h3>
+    {% for year in year_range %}
+        <h4>{{ year.year }}</h4>
+        <ul>
+        {% for month in month_range %}
+            {% ifequal year.year month.year %}
+                <li><a href="{{ ROOT_URL }}/articulos/{{ year.year }}/{{ month|date:"b" }}/">{{ month|date:"F" }}</a></li>
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    {% endif %}
+    </div>
+{% endblock %}

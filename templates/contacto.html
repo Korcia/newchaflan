@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block head_title %}Contacto{% endblock %}
+
+{% block slideshow %}
+<div class="contacto_form">
+    <div id="wrapper_form">
+        <form novalidate="novalidate" class="rounded" id="myform">
+            <fieldset>
+                <legend>Información de Contacto</legend>
+                <figure class="map">
+                    <iframe width="270" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=El+Chafl%C3%A1n,+Madrid,+Spain&amp;aq=0&amp;oq=el+chaflan&amp;sll=40.477795,-3.703508&amp;sspn=0.90044,0.87616&amp;t=v&amp;ie=UTF8&amp;hq=El+Chafl%C3%A1n,+Madrid,+Spain&amp;ll=40.466876,-3.674342&amp;spn=0.016978,0.032015&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=El+Chafl%C3%A1n,+Madrid,+Spain&amp;aq=0&amp;oq=el+chaflan&amp;sll=40.477795,-3.703508&amp;sspn=0.90044,0.87616&amp;t=v&amp;ie=UTF8&amp;hq=El+Chafl%C3%A1n,+Madrid,+Spain&amp;ll=40.466876,-3.674342&amp;spn=0.016978,0.032015" style="color:#ffff95;text-align:left">Ver Mapa Ampliado</a></small>
+                </figure>
+                <dl class="dl-1">
+                    <dt>La Posada de El Chaflán<br>Av de Pío XII, 34,<br>Madrid, 28016.</dt>
+                    <dd><span>Teléfono:</span>+34 913 45 04 50</dd>
+                    <dd><span>FAX:</span>+34 913 50 61 93</dd>
+                    <dd>E-mail La Posada: posada@laposadadeelchaflan.com</dd>
+                    <dd>E-mail Restaurante: restaurante@elchaflan.com</dd>
+                </dl>
+            </fieldset>
+            <fieldset class="last">
+                <legend>Contáctenos</legend>
+                <p>
+                <label>Nombre</label>
+                <input required="required" type="text">
+                </p>
+                <p>
+                <label>Email</label>
+                <input required="required" class="invalid" type="email">
+                </p>
+                <p>
+                <label>Mensaje</label>
+                <textarea rows="8" cols="26">Escriba su mensaje</textarea>
+                </p>
+                <p class="high">
+                <button class="rounded" type="submit">Enviar</button>
+                </p>
+            </fieldset>
+            <div style="clear:both;"></div>
+        </form>
+    </div>
+</div><!-- .contacto -->
+{% endblock %}
+

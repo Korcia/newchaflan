@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+        <title>La Posada de El Chaflán | {% block head_title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="La Posada de el Chaflán, hotel, restaurante">
+        <meta name="keywords" content="hotel, restaurante, posada, juan pablo felipe">
+        <link rel="apple-touch-icon" href="/static/images/favicon.png"/>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen">
+        {% block head %}{% endblock %}
+        <!--<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>-->
+
+    </head>
+
+    <body>
+        <div id="content">
+            
+            
+            {% block slideshow %}{% endblock %}
+            {% block inpop %}{% endblock %}
+            {% block inpop2 %}{% endblock %}
+            {% block inpop3 %}{% endblock %}
+            {% block lacarta %} {% endblock %}
+        
+        </div>
+        
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="/static/js/jquery-1.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.tools.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.cycle.all.latest.js"></script>
+        {% block js_lacarta %}{% endblock %}
+        <!--<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>-->
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'325px',
+                        'height'    :'200px',
+                        'top'       :'-25px',
+                        'left'      :'5px',
+                        'opacity'   :'0.7'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.slideshow').cycle({
+                    fx: 'zoom' // elije el tipo de transición, ej: fade, scrollUp, shuffle, etc...
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            var inpop = $(".inpop"),
+            inpoplink = $(".ex").find('.liv').find('a'),
+            inpopclose = $(".inpop a:first-child"),
+            win = $(window);
+            inpoplink.click(function(e) {
+                if ((navigator.userAgent.indexOf('iPad') != -1)) {
+                    inpop
+                    .toggle()
+                    .css({
+                        "margin-top": $(window).height()/2 - $("header.gen").height() - $(".inpop").height() + "px",
+                        "position": "absolute",
+                        "top": $(window).scrollTop() + "px"
+                    });
+                } else inpop.toggle();
+            e.preventDefault();
+            });
+
+            inpopclose.click(function(e) {
+                $(this).parent().hide();
+                e.preventDefault();
+            });
+        </script>
+        {% block js %}{% endblock %}
+</body>
+</html>

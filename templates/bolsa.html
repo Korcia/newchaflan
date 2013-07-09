@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block head_title %}Bolsa de Trabajo{% endblock %}
+
+{% block slideshow %}
+<div class="contacto_form">
+    <div id="wrapper_form">
+        <form novalidate="novalidate" class="rounded" id="myform">
+            <fieldset>
+                <legend>Bolsa de Trabajo</legend>
+                <p id="trabajo">Si quieres formar parte de un equipo de profesionales emprendedores y con ganas de desarrollarte en un entorno dinámico, creativo y pasional, envía tu Curriculum.
+Podrás adquirir nuevas experiencias u obtener una formación integral en todo lo relativo al mundo de la restauración y de los hoteles.</p>
+                <dl class="dl-1">
+                    <dt>La Posada de El Chaflán<br>Av de Pío XII, 34,<br>Madrid, 28016.</dt>
+                    <dd><span>Teléfono:</span>+34 913 45 04 50</dd>
+                    <dd><span>FAX:</span>+34 913 50 61 93</dd>
+                    <dd>E-mail Bolsa de Trabajo: cv@laposadadeelchaflan.com</dd>
+                </dl>
+            </fieldset>
+            <fieldset class="last">
+                <legend>Envía tu C.V.</legend>
+                <p>
+                <label>Nombre</label>
+                <input required="required" type="text">
+                </p>
+                <p>
+                <label>Email</label>
+                <input required="required" class="invalid" type="email">
+                </p>
+                <p>
+                <label>Mensaje</label>
+                <textarea rows="8" cols="26">Escriba su mensaje</textarea>
+                </p>
+                <p class="high">
+                <button class="rounded" type="submit">Enviar</button>
+                </p>
+            </fieldset>
+            <div style="clear:both;"></div>
+        </form>
+    </div>
+</div><!-- .contacto -->
+{% endblock %}

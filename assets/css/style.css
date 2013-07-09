@@ -1,0 +1,936 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: "Lucida Handwriting";
+    src: url("/static/css/LucidaHandwrit.ttf");
+}
+body {
+    font-family:Arial;
+    background:#fff url(/static/images/back2.jpg) no-repeat top left;
+    background-size: 100%;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 800px;
+}
+#content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.slideshow {
+    width: 950px;
+    height: 671px;
+    position: relative;
+    top: 55px;
+    left: 0px;
+    background:transparent url(/static/images/nube.png) no-repeat top left;
+    margin: 0 auto;
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);*/
+}
+img.slides { 
+    top: 200px;
+    left: 280px;
+    max-width: 100%;
+    /*background-color: rgba(255,255,255,0) !important;*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";*/ /* IE8 */
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);*/   /* IE6 & 7 */ 
+}
+.lacarta {
+    width: 950px;
+    height: 671px;
+    position: relative;
+    top: 55px;
+    left: 0px;
+    background:transparent url(/static/images/nube.png) no-repeat top left;
+    margin: 0 auto;
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);*/
+}
+.navigation {
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    /*width: 900px;*/
+    position: absolute;
+}
+.navigation .item{
+    position: relative;
+    margin: 0px auto;
+    z-index: 30;
+}
+.logo{
+    top: 10px;
+    left: 0px;
+}
+.inicio{
+    top: 214px;
+    left: 0px;
+}
+.posada{
+   top: 20px;
+   left: 228px;
+}
+.chaflan {
+   top: 38px;
+   left: 635px;
+}
+.jpf{
+   top: 620px;
+   left: 670px;
+}
+.contacto{
+   top: 630px;
+   left: 70px;
+}
+.noticias {
+   top: 688px;
+   left: 369px;
+}
+a.icon.logo {
+    width: 125px;
+    height: 195px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor: default;
+}
+a.icon.inicio {
+    width: 200px;
+    height: 119px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+a.icon.posada {
+    width: 200px;
+    height: 143px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+a.icon.chaflan {
+    width: 200px;
+    height: 114px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+a.icon.jpf {
+    width: 200px;
+    height: 113px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+a.icon.contacto{
+    width: 200px;
+    height: 155px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+    z-index: 10;
+}
+a.icon.noticias {
+    width: 200px;
+    height: 103px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.logo a.icon{
+    background:transparent url(/static/images/logo_posada4.png) no-repeat 0px 0px;
+}
+.inicio a.icon{
+    background:transparent url(/static/images/inicio.png) no-repeat 0px 0px;
+}
+.posada a.icon{
+    background:transparent url(/static/images/laposada.png) no-repeat 0px 0px;
+}
+.chaflan a.icon{
+    background:transparent url(/static/images/elchaflan.png) no-repeat 0px 0px;
+}
+.jpf a.icon{
+    background:transparent url(/static/images/jpf.png) no-repeat 0px 0px;
+    z-index: 20;
+}
+.contacto a.icon{
+    background:transparent url(/static/images/contacto.png) no-repeat 0px 0px;
+}
+.noticias a.icon{
+    background:transparent url(/static/images/noticias.png) no-repeat 0px 0px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:52px;
+    height:52px;
+    opacity:0.1;
+    /*z-index: 50;*/
+}
+.item h2{
+    position:absolute;
+    width:147px;
+    height:52px;
+    color:#222;
+    font-size:18px;
+    top: -37px;
+    left:76px;
+    text-indent:10px;
+    line-height:52px;
+    text-shadow:1px 1px 1px #fff;
+    text-transform:uppercase;
+}
+.item h2.active{
+    color:#fff;
+    text-shadow:1px 0px 1px #555;
+}
+.item ul{
+    list-style:none;
+    position:absolute;
+    top: 15px;
+    left: 200px;
+    display:none;
+    z-index: 55;
+}
+.item ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #222;
+    padding: 3px;
+    float: left;
+    clear: both;
+    width: 109px;
+    text-shadow: 1px 1px 1px #fff;
+}
+a.bolsa {
+    font-size: 11px !important;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #222;
+    padding: 3px;
+    float: left;
+    clear: both;
+    width: 118px !important;
+    text-shadow: 1px 1px 1px #fff;
+}
+.item ul li a:hover{
+    background-color:#fff;
+    color:#444;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+}
+.texto_slide { margin-top: -200px; padding-left: 115px; }
+
+.inpop {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Arial';
+    display: block;
+    position: fixed;
+    width: 28em;
+    /*background: #ffff95;*/
+    background: url(/static/images/bg_code.gif) #ededed;
+    z-index: 50;
+    left: 77%; top: 22%;
+    margin: -6em 0 0 -14em;
+    color: #000;
+    padding: .7em 1em;
+    opacity: .95;
+    line-height: 1.4;
+    box-shadow: 0 0 1.5em rgba(0,0,0,.6);   
+    border-radius: .5em;
+}
+.inpop.inpop2 {
+    left: 17%; top: 38%;
+}
+.inpop.inpop3 {
+    left: 45%; top: 78%;
+}
+.inpop.inpop4 {
+    left: 38%; top: 21%;
+}
+.inpop.inpop5 {
+    left: 78%; top: 40%;
+}
+
+.inpop a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.enlace a { color: #000; font-weight: 800; text-decoration: underline;}
+.inpop ul li { margin-left: 25px;}
+.bold {font-weight: 800;}
+#cerrar { font-size: 16px; font-family: 'Arial';}
+.inpop a:first-of-type {
+    position: absolute;
+    top: -.5em;
+    right: -.5em;
+    color: #fff;
+    background: #ff6100;
+    width: 1.15em; height: 1.15em;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1;
+    padding-bottom: .15em;
+    text-shadow: 1px 1px rgba(0,0,0,.5);
+    text-decoration: none;
+}
+.contacto_form {
+    width: 950px;
+    height: 671px;
+    position: relative;
+    top: 55px;
+    left: 0px;
+    background:transparent url(/static/images/nube.png) no-repeat top left;
+    margin: 0 auto;
+}
+#wrapper_form {
+    margin-left: 115px;
+    padding-top: 95px;
+}
+#trabajo { color: #c6d6ee; }
+/* overlay root element */
+#sheet {
+    width:800px;
+    height:550px;
+    position:absolute;
+    font-size:11px;
+    display:none;
+    -webkit-box-shadow: 0 0 30px #777;
+    -moz-box-shadow: 0 0 30px #777;
+}
+
+
+/* the form */
+#myform {
+    background-color:#777;
+    background-color:rgba(0, 0, 0, 0.55);
+    padding:15px;
+    padding-bottom:10px;
+    width:570px;
+    margin:5px 0 0 73px;
+}
+
+#myform p {
+    /*clear:left;*/
+}
+
+fieldset {
+    float:left;
+    margin-left:15px;
+    padding:0;
+    border:0;
+    width:270px;
+}
+
+.last {
+    margin-right:0;
+}
+
+legend {
+    color:#fff;
+    font-size:20px;
+    text-shadow:0 1px 0 #000;
+    padding:0;
+    margin-bottom:-3px;
+}
+
+
+label {
+    display:block;
+    margin:3px;
+    color:#ddd;
+    font-size:18px;
+    text-shadow:0 1px 0 #000;
+}
+.dl-1 { color: #e8ffff; }
+input {
+    border:1px solid;
+    border-color:#ccc #ddd #ddd #ccc;
+    padding:6px;
+    background-color:rgba(255, 255, 255, 0.9);
+    font-size:15px;
+    color:#555;
+    text-shadow:0 1px 0 #fff;
+    width:90%;
+}
+
+input:focus {
+    background-color:#fff;
+    color:#000;
+}
+
+input[required] {
+    font-weight:bold;
+}
+
+/* validation error message */
+.error {
+    background-color:#E8FF6D;
+    padding:4px;
+    color:#000;
+    -webkit-box-shadow: #000 0 0 12px;
+    -moz-box-shadow: #000 0 0 12px;
+}
+
+/* ..with a pure CSS arrow */
+.error em {
+    border:10px solid;
+    border-color:#E8FF6D transparent transparent;
+    bottom:-17px;
+    display:block;
+    height:0;
+    left:10px;
+    position:absolute;
+    width:0;
+}
+
+/* field with validation error */
+.invalid {
+    background-color:rgba(221, 233, 255, 0.898) !important;
+}
+
+/* date input */
+.date {
+    width:193px;
+    background:#666 none repeat scroll 0 0;
+    color:#fff;
+    text-shadow:0 0 1px #000;
+}
+
+.date:focus {
+    background-color:#333;
+    color:#fff;
+}
+
+/* datepicker trigger element */
+.picktrigger {
+    background:#333;
+    cursor:pointer;
+    display:block;
+    float:right;
+    height:32px;
+    width:32px;
+}
+
+.picktrigger:hover {
+    background:#000;
+}
+
+.high {
+    padding:15px 0 0 15px;
+    /*clear:both;*/
+}
+
+/* override slider width from external stylesheet */
+#sheet .slider {
+    width:175px;
+}
+
+/* buttons */
+#wrapper_form button {
+    background:#0150D1 url(/static/images/h30.png) repeat-x 0 0;
+    border:1px solid #d1ddc7;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+    padding:6px 15px;
+    text-align:center;
+    text-decoration:none;
+    text-shadow:0 1px 0 #000;
+    cursor:pointer;
+    height:auto;
+    outline:0;
+}
+
+#wrapper_form button:hover {
+    background-position:0 -12px;
+}
+
+#wrapper_form button:active {
+    background-position:0 -30px;
+}
+
+
+/* tabs */
+#navi {
+    background:#f4f4f4 url(/media/img/html5-form/navi.png) repeat-x 0 0;
+    position:absolute;
+    bottom:2px;
+    height:120px;
+    width:640px;
+    padding:0 80px;
+}
+
+#navi a  {
+    display:block;
+    float:left;
+    text-align:center;
+    color:#666;
+    width:125px;
+    cursor:pointer;
+    font-size:11px;
+}
+
+#navi a:hover {
+    color:#333;
+}
+
+#navi a.current {
+    background:url(/media/img/html5-form/arrow.png) no-repeat 50% 0;
+    color:#000 !important;
+    cursor:default;
+}
+
+#navi span {
+    display:block;
+    height:85px;
+    width:120px;
+    margin-top:10px;
+    background:url(/media/img/html5-form/tabs.png) no-repeat 20px 5px;
+}
+
+#nav2 span { background-position:20px -95px; }
+#nav3 span { background-position:20px -195px; }
+#nav4 span { background-position:20px -292px; }
+#nav5 span { background-position:20px -399px; }
+
+
+/* make some elements sit over the mask */
+.error, #calroot {
+    z-index:10000;
+}
+
+/* overlay close button */
+div.close {
+    right:-15px;
+    top:-15px;
+}
+
+/************************************* La Carta ************************************/
+/* The div holding the wooden table img tag */
+#wooden-table {
+    width: 950px;
+    height: 671px;
+    position: relative;
+    top: 55px;
+    left: 0px;
+    /*background:transparent url(/static/images/nube.png) no-repeat top left;*/
+    margin: 0 auto;
+    /*position: absolute;*/
+}
+/* The light table itself */
+#lighttable {
+  position: relative;
+  top: -625px;
+  width: 760px;
+  height: 685px;
+  /*background: #eee url(images/wooden-table.jpg);*/
+  padding: 0px;
+  margin: 0 auto;
+  /*border: 5px solid #111;*/
+  /*display: none;*/
+}
+
+/* Photos on the light table */
+#lighttable img {
+  border: 10px solid #fff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.9);
+  display: inline !important;
+  position: absolute;
+  /*left: -9999px;*/
+  /*top: -9999px;*/
+}
+
+#lighttable img:hover {
+  cursor: pointer;
+}
+
+#plato1 {
+    left: -30px;
+    top: 441px;
+    -webkit-transform: rotate(24deg);
+    -moz-transform: rotate(24deg);
+    -ms-transform: rotate(24deg);
+    width: 150px;
+    height: 98px;
+    opacity: 0.95;
+    z-index: 1;
+}
+#plato2 {
+    left: 265px;
+    top: 449px;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    width: 100px;
+    height: 150px;
+    opacity: 0.95;
+    z-index: 5;
+}
+#plato3 {
+    left: 334px;
+    top: 311px;
+    -webkit-transform: rotate(22deg);
+    -moz-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    width: 100px;
+    height: 150px;
+    opacity: 0.95;
+    z-index: 4;
+}
+#plato4 {
+    left: 600px;
+    top: 452px;
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -ms-transform: rotate(9deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 2;
+}
+#plato5 {
+    left: 454px;
+    top: 161px;
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 3;
+}
+#plato6 {
+    left: 314px;
+    top: 20px;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 6;
+}
+#plato7 {
+    left: 150px;
+    top: 491px;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    width: 100px;
+    height: 150px;
+    opacity: 0.95;
+    z-index: 1;
+}
+#plato8 {
+    left: 175px;
+    top: 279px;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 5;
+}
+#plato9 {
+    left: 464px;
+    top: 321px;
+    -webkit-transform: rotate(22deg);
+    -moz-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 4;
+}
+#plato10 {
+    left: 610px;
+    top: 290px;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 2;
+}
+#plato11 {
+    left: 184px;
+    top: 121px;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 3;
+}
+#plato12 {
+    left: 0px;
+    top: 299px;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 6;
+}
+#plato13 {
+    left: 440px;
+    top: 432px;
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -ms-transform: rotate(9deg);
+    width: 100px;
+    height: 150px;
+    opacity: 0.95;
+    z-index: 2;
+}
+#plato14 {
+    left: 44px;
+    top: 121px;
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    width: 150px;
+    height: 100px;
+    opacity: 0.95;
+    z-index: 3;
+}
+#plato15 {
+    left: 345px;
+    top: 120px;
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    width: 100px;
+    height: 150px;
+    opacity: 0.95;
+    z-index: 6;
+}
+/********************************* ## RESERVAS ## *************************************/
+#buscador {
+    /*float: left;*/
+    position: relative;
+    z-index: 300;
+    top: 250px;
+    left: 350px;
+    height: 346px !important;
+    padding-bottom: 0;
+    padding-right: 0;
+    width: 300px;
+    margin: 0 0 0 0;
+    /*background: transparent !important;*/
+    background: rgba(74, 73, 73, 0.6);
+    color: #fff;
+    color: #000
+    /* For IE – resetting background color hack */
+    background: transparent\6;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4a4949, endColorstr=#4a4949);
+    -ms-filter: “progid:DXImageTransform.Microsoft.gradient(startColorstr=#4a4949, endColorstr=#4a4949)”;
+}
+#dosinputs{
+    float:left; 
+    width:245px;
+}
+
+#dosinputs input{
+    float:left;
+
+    margin-right: 5px;
+    
+}
+
+#dosinputsleft{
+    width:49%; 
+    float:left;
+}
+
+#dosinputsright{
+    width:50%; 
+    float:right;
+}
+.ui-datepicker-trigger { margin-top: 2px; float: left; }
+#buscador_fechas{
+    float:left;
+    margin-bottom:0px;
+    margin-top:10px;
+    margin-left:5px;
+    z-index: 200;
+    height: 150px;
+    font-size: 12px;
+}
+#buscador_datos{
+    float:left;
+    width:245px;
+    margin-left:2px;
+    margin-top:40px;
+    z-index: 800;
+}
+
+#buscador a img {
+    border:none;
+    padding-bottom:10px;
+    padding:0px;
+}
+#buscador_content{
+    /*float:left;*/
+    line-height: 19px;
+    padding-top: 15px;
+    padding-left: 8px;
+}
+#buscador_content p{
+    color:#FFF;
+    font-size:22px;
+    font-weight:bold;
+}
+#buscador_content p span{
+    color:#da98c3;
+    font-size:15px;
+}
+
+#buscador input {
+    width: 70%;
+    border: 1px solid;
+    border-color: #ccc #ddd #ddd #ccc;
+    padding: 6px;
+    background-color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    color: #555;
+    text-shadow: 0 1px 0 #fff;
+}
+#noches{
+    float:left; 
+    width:245px; 
+    margin-top:3px;
+}
+.habit_content{
+    float:left; 
+    width:245px;
+    margin-left: 35px;
+}
+.habit_content_hab{
+    width:40%;
+    float:left;
+}
+
+.habit_content_adu_nin{
+    width:60%; 
+    float:left; 
+    height:64px;
+}
+
+.filas_habitaciones {
+    float: left;
+    margin-bottom: 3px;
+    width: 145px;
+}
+.habit_titles_hab{
+    width:40%; 
+    float:left;
+}
+
+.habit_titles_adu{
+    width:34%; 
+    float:left;
+}
+
+.habit_titles_nin{
+    width:25%; 
+    float:left;
+}
+#fila_hab_3 select.select_petit {
+    margin-bottom:2px;
+}
+.div_select_adu{
+    width:58%;
+    float:left;
+    height:25px;
+}
+
+.div_select_nin{
+    width:42%; 
+    float:left;
+}
+#buscador_datos button {
+    color:#666;
+    font-size:13px;
+    font-weight:bold;
+    height:30px;
+    text-shadow:#666666;
+    width:210px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    cursor:pointer;
+    -moz-box-shadow:2px 5px 9px -1px rgba(0,0,0,0.5);
+    -webkit-box-shadow:2px 5px 9px -1px rgba(0,0,0,0.5);
+    margin-left: 40px;
+    border:1px solid #fff;
+    display:inline;
+    background-color: #a53d80;
+    line-height: 13px;
+}
+#buscador_datos button:hover {
+    cursor:pointer;
+    background-color: #da98c3;
+}
+button {
+    color: #fff !important;
+    text-transform: none !important;
+    line-height: 30px !important;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: rgb(185, 205, 19);
+}
+#nube {
+    width: 950px;
+    height: 671px;
+    z-index: 1;
+    position: relative;
+    top: -290px;
+    left: 0px;
+    background:transparent url(/static/images/nube.png) no-repeat top left;
+    margin: 0 auto;
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);*/
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+#fila_hab_2,#fila_hab_1, #fila_hab_3 {
+    height:25px;
+    padding-bottom: 5px;
+}
+#fila_hab_2 {
+    opacity: 0.33;  
+}
+#fila_hab_3 {
+    opacity: 0.33;  
+}
+
+#descripcion_larga {
+    text-align:left;
+}
