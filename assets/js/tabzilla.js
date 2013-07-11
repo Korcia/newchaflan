@@ -193,9 +193,10 @@ var Tabzilla = (function (Tabzilla) {
         opened = true;
         panel.toggleClass('open');
         var height = $('#tabzilla-contents').height();
-        panel.animate({'height': height}, 200, function () {
+        /*panel.animate({'height': height}, 200, function () {
             panel.css('height', 'auto');
-        });
+        });*/
+        panel.animate({'height': height}, 400, 'swing');
         tab
             .attr({'aria-expanded' : 'true'})
             .addClass('tabzilla-opened')
@@ -368,7 +369,7 @@ var Tabzilla = (function (Tabzilla) {
         } else {
             script.onload = noConflictCallback;
         }
-        script.src = '//mozorg.cdn.mozilla.net/media/js/libs/jquery-' + minimumJQuery + '.min.js';
+        script.src = '/static/js/jquery-1.10.1.min.js';
         document.getElementsByTagName('head')[0].appendChild(script);
     };
     var compareVersion = function (a, b) {
@@ -397,70 +398,46 @@ var Tabzilla = (function (Tabzilla) {
     })();
     var content =
       '<div id="tabzilla-panel" class="tabzilla-closed" tabindex="-1">'
-    + '  <div id="tabzilla-contents">'
-    + '    <div id="tabzilla-promo">'
-    + '      <div class="snippet" id="tabzilla-promo-mwc">'
-    + '        <a href="https://www.mozilla.org/firefox/partners/?icn=tabz">'
-    + '          <h4>Firefox OS debuts <span>at Mobile World Congress!</span></h4>'
-    + '          <p>Learn more »</p>'
-    + '        </a>'
-    + '      </div>'
+    + '    <div id="tabzilla-contents">'
+    + '        <div id="tabzilla-promo">'
+    + '            <div class="snippet" id="tabzilla-promo-mwc">'
+    + '                <a href="http://www.laposadadeelchaflan.com/"></a>'
+    + '            </div>'
+    + '        </div>'
+    + '        <div id="tabzilla-nav">'
+    + '            <ul>'
+    + '                <li class="inicio primer-hijo"><a href="/">Inicio</a></li>'
+    + '                <li class="inicio primer-hijo"><a href="/noticias/">Noticias</a></li>'
+    + '                <li><a class="primer-hijo">La Posada</a>'
+    + '                    <ul class="sub-menu">'
+    + '                        <li><a href="/reservas/">Reservas</a></li>'
+    + '                        <li><a href="/alojamiento/">Alojamiento</a></li>'
+    + '                        <li><a href="/experiencias/">Experi-Momentos</a></li>'
+    + '                        <li><a href="/servicios/">Servicios</a></li>'
+    + '                        <li><a href="/atico/">Ático</a></li>'
+    + '                    </ul></li>'
+    + '                <li class="jpf"><a class="primer-hijo">Juan Pablo Felipe</a>'
+    + '                    <ul class="sub-menu">'
+    + '                        <li><a href="/biografia/">Biografía</a></li>'
+    + '                        <li><a href="/consultoria/">Consultoría</a></li>'
+    + '                        <li><a href="/formacion/">Formación</a></li>'
+    + '                        <li><a href="/catering/">Cátering</a></li>'
+    + '                    </ul></li>'
+    + '                <li><a class="primer-hijo">El Chaflán</a>'
+    + '                    <ul class="sub-menu">'
+    + '                        <li><a href="/restaurante/">Restaurante</a></li>'
+    + '                        <li><a href="/cocktail/">Cocktail</a></li>'
+    + '                        <li><a href="/lounge/">Lounge</a></li>'
+    + '                        <li><a href="/lacarta/">La Carta</a></li>'
+    + '                    </ul></li>'
+    + '                <li><a class="primer-hijo">Contacto</a>'
+    + '                    <ul class="sub-menu">'
+    + '                        <li><a href="/contacto/">Contacto</a></li>'
+    + '                        <li><a href="/bolsa/">Bolsa de Trabajo</a></li>'
+    + '                    </ul></li>'
+    + '            </ul>'
+    + '        </div>'
     + '    </div>'
-    + '    <div id="tabzilla-nav">'
-    + '      <ul>'
-    + '        <li><h2>Mozilla</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><a href="https://www.mozilla.org/mission/?icn=tabz">Mission</a></li>'
-    + '              <li><a href="https://www.mozilla.org/about/?icn=tabz">About</a></li>'
-    + '              <li><a href="https://www.mozilla.org/projects/?icn=tabz">Projects</a></li>'
-    + '              <li><a href="https://support.mozilla.org/?icn=tabz">Support</a></li>'
-    + '              <li><a href="https://developer.mozilla.org/?icn=tabz">Developer Network</a></li>'
-    + '            </ul>'
-    + '          </div>'
-    + '        </li>'
-    + '        <li><h2>Products</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><a href="https://www.mozilla.org/firefox/?icn=tabz">Firefox</a></li>'
-    + '              <li><a href="https://www.mozilla.org/thunderbird/?icn=tabz">Thunderbird</a></li>'
-    + '              <li><a href="https://www.mozilla.org/firefoxos/?icn=tabz">Firefox OS</a></li>'
-    + '            </ul>'
-    + '          </div>'
-    + '        </li>'
-    + '        <li><h2>Innovations</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><a href="https://webfwd.org/?icn=tabz">WebFWD</a></li>'
-    + '              <li><a href="https://mozillalabs.com/?icn=tabz">Labs</a></li>'
-    + '              <li><a href="https://webmaker.org/?icn=tabz">Webmaker</a></li>'
-    + '              <li><a href="https://www.mozilla.org/research/?icn=tabz">Research</a></li>'
-    + '            </ul>'
-    + '          </div>'
-    + '        </li>'
-    + '        <li><h2>Get Involved</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><a href="https://www.mozilla.org/contribute/?icn=tabz">Volunteer</a></li>'
-    + '              <li><a href="https://www.mozilla.org/en-US/about/careers.html?icn=tabz">Careers</a></li>'
-    + '              <li><a href="https://www.mozilla.org/en-US/about/mozilla-spaces/?icn=tabz">Find us</a></li>'
-    + '              <li><a href="https://sendto.mozilla.org/Join-Tabzilla/?icn=tabz">Donate</a></li>'
-    + '              <li><a href="https://www.mozilla.org/about/partnerships/?icn=tabz">Partner</a></li>'
-    + '            </ul>'
-    + '          </div>'
-    + '        </li>'
-    + '        <li id="tabzilla-search">'
-    + '          <a href="https://www.mozilla.org/community/directory.html?icn=tabz">Website Directory</a>'
-    + '          <form title="Search Mozilla sites" role="search" action="//www.google.com/cse">'
-    + '            <input type="hidden" value="002443141534113389537:ysdmevkkknw" name="cx">'
-    + '            <input type="hidden" value="FORID:0" name="cof">'
-    + '            <label for="q">Search</label>'
-    + '            <input type="search" placeholder="Search" id="q" name="q">'
-    + '          </form>'
-    + '        </li>'
-    + '      </ul>'
-    + '    </div>'
-    + '  </div>';
     + '</div>';
 
     return Tabzilla;

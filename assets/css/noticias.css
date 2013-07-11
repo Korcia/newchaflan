@@ -8,17 +8,17 @@
 }*/
 @font-face {
     font-family: 'lucida_handwritingitalic';
-    src: url('lhandw-webfont.eot');
-    src: url('lhandw-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lhandw-webfont.woff') format('woff'),
-         url('lhandw-webfont.ttf') format('truetype'),
-         url('lhandw-webfont.svg#lucida_handwritingitalic') format('svg');
+    src: url('/static/fonts/lhandw-webfont.eot');
+    src: url('/static/fonts/lhandw-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/lhandw-webfont.woff') format('woff'),
+         url('/static/fonts/lhandw-webfont.ttf') format('truetype'),
+         url('/static/fonts/lhandw-webfont.svg#lucida_handwritingitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 body {
-    font-family:Arial;
+    font-family: arial;
     background:#fff url(/static/images/back-blog2.jpg) repeat-y top left;
     background-size: 100%;
     width: 100%;
@@ -40,6 +40,11 @@ body {
     height: auto !important;
     height: 100%;
     margin: 0 auto -4em;
+}
+#outer-wrapper {
+    position: relative;
+    border-top: 2px solid #fff;
+    /*background: #f9f9f9 url(/static/images/back-blog2.jpg?) 0 0 repeat-y;*/
 }
 .footer, .push {
     height: 4em;
