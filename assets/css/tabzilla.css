@@ -161,7 +161,9 @@ child+html #tabzilla-contents {
     cursor: default;
     text-decoration: none !important;
 }
-.jpf { width: 170px !important; }
+.jpf { width: 142px !important; }
+.elchaflan { width: 100px !important; }
+.lasnoches { width: 162px !important; }
 li.inicio {
     float: left;    
     display: inline;

@@ -20,17 +20,17 @@ body {
 }
 
 .slideshow {
-    width: 950px;
-    height: 671px;
+    width: 850px;
+    height: 600px;
     position: relative;
-    top: 55px;
-    left: 0px;
-    background:transparent url(/static/images/nube.png) no-repeat top left;
+    top: 15px;
+    left: 25px;
+    background:transparent url(/static/images/nube2.png) no-repeat top left;
     margin: 0 auto;
     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);*/
 }
 img.slides { 
-    top: 200px;
+    top: 190px;
     left: 280px;
     max-width: 100%;
     /*background-color: rgba(255,255,255,0) !important;*/
@@ -75,26 +75,26 @@ img.slides {
    left: 228px;
 }
 .chaflan {
-   top: 38px;
-   left: 635px;
+   top: 15px;
+   left: 645px;
 }
 .jpf{
-   top: 620px;
-   left: 670px;
+   top: 555px;
+   left: 380px;
 }
 .contacto{
-   top: 630px;
-   left: 70px;
+   top: 490px;
+   left: 39px;
 }
 .noticias {
-   top: 688px;
-   left: 369px;
+   top: 501px;
+   left: 655px;
 }
 a.icon.logo {
     width: 125px;
     height: 195px;
     position:absolute;
-    top:0px;
+    top: -15px;
     left:0px;
     cursor: default;
 }
@@ -295,17 +295,17 @@ a.bolsa {
     text-decoration: none;
 }
 .contacto_form {
-    width: 950px;
-    height: 671px;
+    width: 850px;
+    height: 600px;
     position: relative;
-    top: 55px;
-    left: 0px;
-    background:transparent url(/static/images/nube.png) no-repeat top left;
+    top: 20px;
+    left: 25px;
+    background:transparent url(/static/images/nube2.png) no-repeat top left;
     margin: 0 auto;
 }
 #wrapper_form {
-    margin-left: 115px;
-    padding-top: 95px;
+    margin-left: 45px;
+    padding-top: 165px;
 }
 #trabajo { color: #c6d6ee; }
 /* overlay root element */
@@ -363,6 +363,7 @@ label {
     text-shadow:0 1px 0 #000;
 }
 .dl-1 { color: #e8ffff; }
+.dl-1 dd { margin: 21px 0; }
 input {
     border:1px solid;
     border-color:#ccc #ddd #ddd #ccc;
@@ -529,8 +530,8 @@ div.close {
 /************************************* La Carta ************************************/
 /* The div holding the wooden table img tag */
 #wooden-table {
-    width: 950px;
-    height: 671px;
+    width: 850px;
+    height: 600px;
     position: relative;
     top: 55px;
     left: 0px;
@@ -569,7 +570,7 @@ div.close {
 
 #plato1 {
     left: -30px;
-    top: 441px;
+    top: 419px;
     -webkit-transform: rotate(24deg);
     -moz-transform: rotate(24deg);
     -ms-transform: rotate(24deg);
@@ -602,7 +603,7 @@ div.close {
 }
 #plato4 {
     left: 600px;
-    top: 452px;
+    top: 426px;
     -webkit-transform: rotate(9deg);
     -moz-transform: rotate(9deg);
     -ms-transform: rotate(9deg);
@@ -612,7 +613,7 @@ div.close {
     z-index: 2;
 }
 #plato5 {
-    left: 454px;
+    left: 542px;
     top: 161px;
     -webkit-transform: rotate(6deg);
     -moz-transform: rotate(6deg);
@@ -623,8 +624,8 @@ div.close {
     z-index: 3;
 }
 #plato6 {
-    left: 314px;
-    top: 20px;
+    left: 332px;
+    top: 60px;
     -webkit-transform: rotate(5deg);
     -moz-transform: rotate(5deg);
     -ms-transform: rotate(5deg);
@@ -635,7 +636,7 @@ div.close {
 }
 #plato7 {
     left: 150px;
-    top: 491px;
+    top: 427px;
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
     -ms-transform: rotate(4deg);
@@ -678,8 +679,8 @@ div.close {
     z-index: 2;
 }
 #plato11 {
-    left: 184px;
-    top: 121px;
+    left: 210px;
+    top: 153px;
     -webkit-transform: rotate(-6deg);
     -moz-transform: rotate(-6deg);
     -ms-transform: rotate(-6deg);
@@ -712,7 +713,7 @@ div.close {
 }
 #plato14 {
     left: 44px;
-    top: 121px;
+    top: 156px;
     -webkit-transform: rotate(6deg);
     -moz-transform: rotate(6deg);
     -ms-transform: rotate(6deg);
@@ -722,8 +723,8 @@ div.close {
     z-index: 3;
 }
 #plato15 {
-    left: 345px;
-    top: 120px;
+    left: 418px;
+    top: 145px;
     -webkit-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
     -ms-transform: rotate(1deg);
@@ -737,7 +738,7 @@ div.close {
     /*float: left;*/
     position: relative;
     z-index: 300;
-    top: 250px;
+    top: 172px;
     left: 350px;
     height: 346px !important;
     padding-bottom: 0;
@@ -907,13 +908,13 @@ button {
     background-color: rgb(185, 205, 19);
 }
 #nube {
-    width: 950px;
-    height: 671px;
+    width: 850px;
+    height: 600px;
     z-index: 1;
     position: relative;
-    top: -290px;
-    left: 0px;
-    background:transparent url(/static/images/nube.png) no-repeat top left;
+    top: -328px;
+    left: 20px;
+    background:transparent url(/static/images/nube2.png) no-repeat top left;
     margin: 0 auto;
     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);*/
 }

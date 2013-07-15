@@ -1,0 +1,47 @@
+{% extends "base-noches.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Eventos de la posada de el chaflán chaflan.">
+{% endblock %}
+{% load sidebar_tags %}
+
+{% block head_title %}Noches de El Chaflán {{ month|date:"F Y" }}{% endblock %}
+{% block noticias %}
+    <div id="eventos">
+    <div id="evento-panel">
+    <h2 class="cabecera-mes">Eventos programados en {{ month|date:"F Y" }}</h2>
+    {% for entry in object_list %}
+        {% if forloop.counter == 1 or forloop.counter == 5 %}
+            <div class="evento primer-col">
+                <h3><a href="{{ entry.get_absolute_url }}"><p>{{ entry.titulo_foto }}</p></a></h3>
+                <p><a href="{{ entry.get_absolute_url }}"><img src="/media/{{ entry.thumbnail}}"></a></p>
+                <h3><a href="{{ entry.get_absolute_url }}"><p class="fecha_evento">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p></a></h3>
+            </div>
+        {% else %}
+            <div class="evento">
+                <h3><a href="{{ entry.get_absolute_url }}">{{ entry.titulo_foto }}</a></h3>
+                <p><a href="{{ entry.get_absolute_url }}"><img src="/media/{{ entry.thumbnail}}"></a></p>
+                <h3><a href="{{ entry.get_absolute_url }}"><p class="fecha_evento">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p></a></h3>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}
+{% block sidebar %}
+    <div id="sidebar2" class="sidebar">
+    {% get_noches %}
+    {% if year_range %}
+    <h3>Archivos</h3>
+    {% for year in year_range %}
+        <h4>{{ year.year }}</h4>
+        <ul>
+        {% for month in month_range %}
+            {% ifequal year.year month.year %}
+                <li><a href="{{ ROOT_URL }}/noches/{{ year.year }}/{{ month|date:"b" }}/">{{ month|date:"F" }}</a></li>
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    {% endif %}
+    </div>
+{% endblock %}

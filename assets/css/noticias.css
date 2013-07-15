@@ -44,6 +44,8 @@ body {
 #outer-wrapper {
     position: relative;
     border-top: 2px solid #fff;
+    margin: 0 auto;
+    width: 950px;
     /*background: #f9f9f9 url(/static/images/back-blog2.jpg?) 0 0 repeat-y;*/
 }
 .footer, .push {

@@ -1,0 +1,64 @@
+{% extends "base-noches.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Eventos de la posada de el chaflán chaflan.">
+{% endblock %}
+{% load sidebar_tags %}
+
+{% block head_title %}Noches de El Chaflán{% endblock %}
+
+{% block noticias %}
+    <div id="eventos">
+    {% for entry in latest %}
+        {% if forloop.first %}
+            <div id="panel-principal">
+            <div id="evento-principal">
+                <a href="{{ entry.get_absolute_url }}">
+                <h2>{{ entry.titulo_foto }} - <span class="fecha_evento_principal">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</span></h2>
+                <img src="/media/{{ entry.imagen}}"></a>
+            </div>
+            <div id="archivo">
+                <h3>Calendario</h3>
+                {% get_noches %}
+                {% if year_range %}
+                    <div id="rango">
+                        <ul class="archive_year">
+                        {% for year in year_range %}
+                            <li class="abrir">{{ year.year }}
+                                <ul class="archive_month">
+                                {% for month in month_range %}
+                                    {% ifequal year.year month.year %}
+                                        <li class="months"><a href="{{ ROOT_URL }}/noches/{{ year.year }}/{{ month|date:"m" }}/">{{ month|date:"F" }}</a></li>
+                                    {% endifequal %}
+                                {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+            </div>
+        {% elif forloop.counter == 2 %}
+            <div id="evento-panel">
+                <div class="evento primer-col">
+                    <h3><a href="{{ entry.get_absolute_url }}"><p>{{ entry.titulo_foto }}</p></a></h3>
+                    <p><a href="{{ entry.get_absolute_url }}"><img src="/media/{{ entry.thumbnail}}"></a></p>
+                    <h3><a href="{{ entry.get_absolute_url }}"><p class="fecha_evento">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p></a></h3>
+                </div>
+        {% elif forloop.counter == 5 %}
+            <div class="evento primer-col">
+                <h3><a href="{{ entry.get_absolute_url }}"><p>{{ entry.titulo_foto }}</p></a></h3>
+                <p><a href="{{ entry.get_absolute_url }}"><img src="/media/{{ entry.thumbnail}}"></a></p>
+                <h3><a href="{{ entry.get_absolute_url }}"><p class="fecha_evento">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p></a></h3>
+            </div>
+        {% else %}
+            <div class="evento">
+                <h3><a href="{{ entry.get_absolute_url }}">{{ entry.titulo_foto }}</a></h3>
+                <p><a href="{{ entry.get_absolute_url }}"><img src="/media/{{ entry.thumbnail}}"></a></p>
+                <h3><a href="{{ entry.get_absolute_url }}"><p class="fecha_evento">{{ entry.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p></a></h3>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

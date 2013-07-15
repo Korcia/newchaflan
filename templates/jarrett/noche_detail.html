@@ -1,0 +1,17 @@
+{% extends "base-noches.html" %}
+{% block meta_name_description %}
+<meta name="description" content="Eventos de la posada de el chaflán chaflan.">
+{% endblock %}
+
+{% block head_title %}Las Noches de El Chaflán: {{ object.titulo_evento }}{% endblock %}
+{% block noticias %}
+    <div id="noticia-detalle">
+        <div class="post-detalle">
+        <h1 class="title-detalle">{{ object.titulo_evento }}</h1>
+        <p class="byline-detalle">{{ object.fecha_evento|date:"j \d\e F \a \l\a\s H:i" }}</p>
+        <div class="entry-detalle">
+        {{ object.contenido|safe }}
+        </div>
+        </div>
+    </div>
+{% endblock %}

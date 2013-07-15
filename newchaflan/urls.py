@@ -1,6 +1,7 @@
 #coding=UTF-8
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
+from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
@@ -25,8 +26,9 @@ urlpatterns = patterns('',
     (r'^lacarta/$', TemplateView.as_view(template_name="lacarta.html")),
     (r'^tinymce/', include('tinymce.urls')),
     (r'^noticias/', include('coltrane.urls.noticias')),
+    (r'^las-noches-de-el-chaflan/', include('jarrett.urls.noches')),
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, }),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 )
