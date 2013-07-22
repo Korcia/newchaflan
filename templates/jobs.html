@@ -1,0 +1,44 @@
+{% extends "base-en.html" %}
+
+{% block head_title %}Jobs{% endblock %}
+
+{% block slideshow %}
+<div class="contacto_form">
+    <div id="wrapper_form">
+        <form novalidate="novalidate" class="rounded" id="myform">
+            <fieldset>
+                <legend>Jobs</legend>
+                <p id="trabajo">If you want to join a team of professionals and entrepreneurs eager to develop yourself in a dynamic, creative and passionate way, please send you C.V.
+You can have new experiences or get training in all matters related to the world of restaurants and hotels.</p>
+            </fieldset>
+            <fieldset class="last">
+                <legend>Send your C.V.</legend>
+                <dl class="dl-1">
+                    <dt>La Posada de El Chaflán<br>Av de Pío XII, 34,<br>Madrid, 28016.</dt>
+                    <dd><span>Phone:</span>+34 913 45 04 50</dd>
+                    <dd><span>FAX:</span>+34 913 50 61 93</dd>
+                    <dd>E-mail Jobs: cv@laposadadeelchaflan.com</dd>
+                </dl>
+                {% comment %}
+                <p>
+                <label>Nombre</label>
+                <input required="required" type="text">
+                </p>
+                <p>
+                <label>Email</label>
+                <input required="required" class="invalid" type="email">
+                </p>
+                <p>
+                <label>Mensaje</label>
+                <textarea rows="8" cols="26">Escriba su mensaje</textarea>
+                </p>
+                <p class="high">
+                <button class="rounded" type="submit">Enviar</button>
+                </p>
+                {% endcomment %}
+            </fieldset>
+            <div style="clear:both;"></div>
+        </form>
+    </div>
+</div><!-- .contacto -->
+{% endblock %}

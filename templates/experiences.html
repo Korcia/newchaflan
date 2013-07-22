@@ -1,0 +1,81 @@
+{% extends "base-en.html" %}
+
+{% block head_title %}Experi-moments{% endblock %}
+
+{% block slideshow %}
+<div class="slideshow">
+    <img class="slides" src="/static/images/slides/experiencias/slide1.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide2.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide3.png" style="width:950; height:671;" />
+    <!--<img class="slides" src="/static/images/slides/experiencias/slide4.png" style="width:950; height:671;" />-->
+    <img class="slides" src="/static/images/slides/experiencias/slide5.png" style="width:950; height:671;" />
+    <img class="slides" src="/static/images/slides/experiencias/slide6.png" style="width:950; height:671;" />
+</div><!-- .slideshow -->
+{% endblock %}
+
+{% block inpop %}
+<div class="inpop" id="cierre1">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN PASSION</h3>
+    <p>Ideal for a romantic moment for couples. A Magnum room designed for two. Aromas, petals, fruits,
+    champagne, music and candles. Dinner at "El Chaflán", proposed by  Juan Pablo Felipe and after a drink in
+    our Lounge. Enjoy the night and in the morning we serve breakfast in the room.
+    Price (VAT included) 250 euros per couple.</p>
+</div>
+{% endblock %}
+{% block inpop2 %}
+<div class="inpop inpop3" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN EXPRESS</h3>
+    <p>Designed for tourists who have a moment to leave the tension out.</p>
+    <p>Aperitif at the cocktail bar, urban lunch at  "El Chaflán" restaurant and some  rest in a single or double room  until 8 p.m.</p>
+    <p>Price (VAT included) 50 euros for a  single room and 90 euros for 2 in a double room</p>
+</div>
+{% endblock %}
+{% block inpop3 %}
+<div class="inpop inpop2" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN TRAVELLER</h3>
+    <p>Designed for groups of friends and couples that want to share a very "chic" weekend in Madrid.</p>
+    <p>2 nights accommodation (Friday and Saturday with departure on Sunday), in a Superior double room.
+First night dinner in "The Chaflan" creative tapas made by Juan Pablo Felipe, drinks included. Afterwards we continue at the the "Glass Bar" of Hotel Urban, where we can enjoy 2 drinks at one of the renown Cocktail Bar in Madrid.
+Now to bed and buffet breakfast in the morning.</p>
+    <p>Second night, Juan Pablo Felipe prepares a tasting menu of his most representative dishes. End the evening with 2 drinks at the Lounge.</p>
+    <p>Now to bed and buffet breakfast in the morning.
+Our travelling recommendation for midday is:
+Sábado&amp;Segovia. Visit the city and the Alcazar. Tasting lunch at the  Restaurante Maracaibo, by Oscar
+Domingo&amp;Toledo. Visit the city and  El Greco Museum. Tasting lunch menu at the  Restaurante Adolfo with a visit to its winery.</p>
+    <p>Price per couple (VAT included) 685€ and Single 420€</p>
+    <p>Entrance tickets included for the Alcazar of Segovia and the El Greco Museum. Transfers are not included.</p>
+</div>
+{% endblock %}
+{% block inpop4 %}
+{% endblock %}
+{% block inpop5 %}
+<div class="inpop inpop5" id="cierre2">
+    <a id="cerrar" href="#" title="Close popup">x</a>
+    <h3>CHAFLÁN MADRID</h3>
+    <p>Discover a more alternative Madrid for 2 days. Designed for couples or groups of friends wishing to discover the best kept secrets in Madrid.</p>
+    <p>2 2 nights accommodation (Friday and Saturday with departure on Sunday), in a Superior double room.
+<strong>First night</strong> (Friday ), aperitif in our Cocktail bar and tasting dinner at the "El Chaflán" by our chef  Juan Pablo Felipe. Going for drinks to the Alternative Madrid. 2 live music pubs with new talents. A drink at each.
+<strong>Day 2</strong> (Saturday), visiting the most interesting art exhibitions at the moment.
+Lunch at Gastro Bar  and Dinner at the Flamenco Tablao  "El Corral de la Moreria" and afterwards 2 drinks at the wildest Madrid.
+Now to bed and buffet breakfast in the morning.</p>
+    <p>On Sunday morning a visit to old Madrid in a tourist bus.
+Guides not included ( please check prices). Includes exposition prices and Tourist Bus.</p>
+    <p>Price per couple ( VAT included) 620€  and Single  385€</p>
+</div>
+{% endblock %}
+
+{% block js %}
+<!--
+<script type="text/javascript">
+$("#cerrar").click(function(){
+    if($('#cierre2').height() > 100){
+        $('#cierre2').hide(500, function() {  // esconde div
+            $(this).css('height','50px');})}
+    else { $('#cierre2').show(500, function() {
+        $(this).css('height', '150px');})};
+     });
+</script>-->
+{% endblock %}

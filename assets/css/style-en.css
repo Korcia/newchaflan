@@ -62,7 +62,7 @@ img.slides {
     margin: 0px auto;
     z-index: 30;
 }
-.navigation .bandera {
+.navigation .bandera-es {
     position: relative;
     margin: 0 auto;
     z-index: 30;
@@ -95,7 +95,7 @@ img.slides {
    top: 501px;
    left: 655px;
 }
-.bandera {
+.bandera-es {
     top: 43px;
     left: 62px;
 }
@@ -156,7 +156,7 @@ a.icon.noticias {
     left:0px;
     cursor:pointer;
 }
-a.icon.bandera {
+a.icon.bandera-es {
     position: absolute;
     cursor: pointer;
     width: 32px;
@@ -166,7 +166,7 @@ a.icon.bandera {
     background:transparent url(/static/images/logo_posada4.png) no-repeat 0px 0px;
 }
 .inicio a.icon{
-    background:transparent url(/static/images/inicio.png) no-repeat 0px 0px;
+    background:transparent url(/static/images/home.png) no-repeat 0px 0px;
 }
 .posada a.icon{
     background:transparent url(/static/images/laposada.png) no-repeat 0px 0px;
@@ -179,13 +179,13 @@ a.icon.bandera {
     z-index: 20;
 }
 .contacto a.icon{
-    background:transparent url(/static/images/contacto.png) no-repeat 0px 0px;
+    background:transparent url(/static/images/contact.png) no-repeat 0px 0px;
 }
 .noticias a.icon {
-    background:transparent url(/static/images/noticias.png) no-repeat 0px 0px;
+    background:transparent url(/static/images/news.png) no-repeat 0px 0px;
 }
-.bandera a.icon {
-    background:transparent url(/static/images/flag_uk.png) no-repeat 0px 0px;
+.bandera-es a.icon {
+    background:transparent url(/static/images/flag_spain.png) no-repeat 0px 0px;
 }
 .item img.circle{
     position:absolute;

@@ -1,0 +1,40 @@
+{% extends "base-en.html" %}
+
+{% block head_title %}Menu{% endblock %}
+{% block head %}
+<link href="/static/css/colorbox.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block js_lacarta %}
+<script src="/static/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="/static/js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$('#lighttable img').click(function() {
+    var imageFile = $(this).attr('src');
+    imageFile = imageFile.replace ( /lacarta\//, "lacarta/slides-big/" )
+    var imageCaption = $(this).attr('alt');
+    $(this).colorbox( { href: imageFile, maxWidth: "900px", maxHeight: "600px", title: imageCaption } );
+});
+</script>
+{% endblock %}
+{% block lacarta %}
+<!--<div style="clear:both;"></div>-->
+<div id="wooden-table"><img src="/static/images/nube2.png" alt="Wooden table image" /></div>
+<!--<div style="clear:both;"></div>-->
+<div id="lighttable">
+    <img id="plato1" src="/static/images/lacarta/quesos-en-formas-con-dulces.jpg" alt="Cheese with Sweets" />
+    <img id="plato2" src="/static/images/lacarta/tartar-de-atun.jpg" alt="Tuna Tartar" />
+    <img id="plato3" src="/static/images/lacarta/alcachofas-al-oloroso.jpg" alt="Artichokes in Oloroso wine" />
+    <img id="plato4" src="/static/images/lacarta/hamburguesa-de-toro.jpg" alt="Bull Burger" />
+    <img id="plato5" src="/static/images/lacarta/secreto-iberico.jpg" alt="Secreto Ibérico" />
+    <img id="plato6" src="/static/images/lacarta/albondigas-de-steak-tartar.jpg" alt="Steak Tartar Meatballs" />
+    <img id="plato7" src="/static/images/lacarta/atun-a-los-tomates.jpg" alt="Tuna and tomates" />
+    <img id="plato8" src="/static/images/lacarta/berenjenas-fritas.jpg" alt="Fried Eggplant" />
+    <img id="plato9" src="/static/images/lacarta/brownie.jpg" alt="Brownie" />
+    <img id="plato10" src="/static/images/lacarta/chipirones-con-parmetier-a-la-brasa.jpg" alt="Squid with Grilled Parmetier" />
+    <img id="plato11" src="/static/images/lacarta/coca-de-atun-con-huevas-de-arenque.jpg" alt="Coca Tuna with Herring Roe" />
+    <img id="plato12" src="/static/images/lacarta/ensalada-campera.jpg" alt="Campera Salad" />
+    <img id="plato13" src="/static/images/lacarta/pasion.jpg" alt="Passion" />
+    <img id="plato14" src="/static/images/lacarta/risotto-de-hongos.jpg" alt="Fungi Risotto" />
+    <img id="plato15" src="/static/images/lacarta/tortillitas-de-camaron.jpg" alt="Shrimp fritters" />
+</div>
+{% endblock %}
